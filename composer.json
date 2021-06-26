@@ -1,0 +1,22 @@
+{
+    "name": "annon/alidns",
+    "description": "a lite alicloud api package.",
+    "license": "MulanPSL-2.0",
+    "type": "library",
+    "authors": [
+        {
+            "name": "annon",
+            "email": "1435427137@qq.com"
+        }
+    ],
+    "require": {
+        "ext-json": "*",
+        "php": ">=7.0",
+        "ext-curl": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "annon\\": "src/"
+        }
+    }
+}
