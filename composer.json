@@ -1,17 +1,21 @@
 {
     "name": "annon/aliyun",
     "description": "a lite alicloud api package.",
+	"keywords": ["aliyun","api","lite"],
     "license": "MulanPSL-2.0",
     "type": "library",
     "authors": [
         {
             "name": "annon",
-            "email": "1435427137@qq.com"
+            "email": "1435427137@qq.com",
+			"homepage": "https://www.annon.cn",
+            "role": "Developer"
         }
     ],
+	"minimum-stability": "stable",
     "require": {
+		"php": ">=7.0",
         "ext-json": "*",
-        "php": ">=7.0",
         "ext-curl": "*"
     },
     "autoload": {

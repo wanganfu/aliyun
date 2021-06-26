@@ -25,10 +25,3 @@ $res = $aliDns->data([
     ->action("DescribeDomainRecordInfo")
     ->send();
 var_dump($res);
-
-$res = $aliDns->data([
-        "DomainName" => "avza.cn"
-    ])
-    ->action("DescribeDomainRecordInfo")
-    ->send();
-var_dump($res);
