@@ -15,7 +15,7 @@ final class AliDns
         "Format" => "JSON",
         "SignatureMethod" => "HMAC-SHA1",
         "SignatureVersion" => "1.0",
-        "Version" => "2015-01-09"
+        "Version" => "2017-05-25"
     ];
 
     private $secret = "";
@@ -61,7 +61,7 @@ final class AliDns
         return json_decode($res, true);
     }
 
-    final private function curl_post($params)
+    private function curl_post($params)
     {
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_TIMEOUT, 60);
