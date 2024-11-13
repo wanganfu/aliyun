@@ -20,7 +20,7 @@ final class Config
     public function __construct(
         $accessId,
         $accessSecret,
-        $aliServer = "https://dns.aliyuncs.com"
+        $aliServer = "dns.aliyuncs.com"
     )
     {
         $this->accessId = $accessId;

@@ -9,7 +9,7 @@ use annon\Config;
 $secret = "you secret";
 $key = "you secert id";
 
-$aliDns = (new AliDns(new Config($key, $secret)));
+$aliDns = new AliDns(new Config($key, $secret));
 
 $res = $aliDns->data([
         "DomainName" => "avza.cn",

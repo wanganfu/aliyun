@@ -31,13 +31,19 @@ final class AliDns
         $this->aliServer = $config->aliServer;
     }
 
-    final public function action($action): AliDns
+    final public function version(string $version): AliDns
+    {
+        $this->public["Version"] = $version;
+        return $this;
+    }
+
+    final public function action(string $action): AliDns
     {
         $this->public["Action"] = $action;
         return $this;
     }
 
-    final public function data($data): AliDns
+    final public function data(array $data): AliDns
     {
         $this->public = array_merge($this->public, $data);
         return $this;
@@ -50,7 +56,7 @@ final class AliDns
 
         $signature = base64_encode(hash_hmac(
             'SHA1',
-            'POST&%2F&' . urlencode(http_build_query($params)),
+            'POST&%2F&' . rawurlencode(http_build_query($params)),
             $this->secret . '&',
             true
         ));
